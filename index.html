@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<meta charset="utf-8">
+		<title>Cuaderno Alumnos</title>
+	</head>
+	<body ng-controller="AlumnosController">
+		<h1>Cuaderno Alumnos</h1>
+		<div>
+			<div ng-repeat="alumno in alumnos">
+				<div>{{alumno.nombre}} - {{alumno.telefono}}</div>
+				<span>{{alumno.curso}}</span>
+			</div>
+		</div>
+
+		<script src="bower_components/angularjs/angular.min.js"></script>
+		<script src="js/script.js"></script>
+
+	</body>
+</html>
