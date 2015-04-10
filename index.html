@@ -8,10 +8,18 @@
 	<body ng-controller="AlumnosController">
 		<h1>Cuaderno Alumnos</h1>
 		<div class="wrapper">
-			<div class="contact-item" ng-repeat="alumno in alumnos">
-				<div>{{alumno.nombre}} - {{alumno.telefono}}</div>
-				<span>{{alumno.curso}}</span>
+			<div class="contact-item" ng-repeat="alumno in alumnos | orderBy:'nombre'">
+				<div class="nombre">{{alumno.nombre}} - {{alumno.telefono}}</div>
+				<span class="curso">{{alumno.curso}}</span>
 			</div>
+		</div>
+
+		<div class="wrapper">
+			<h2>Añadir un contacto</h2>
+			Nombre: <input type="text" ng-model="nuevoAlumno.nombre"></input>
+			Telefono: <input type="text" ng-model="nuevoAlumno.telefono"></input>
+			Curso: <input type="text" ng-model="nuevoAlumno.curso"></input>
+			<button ng-click="Save()">Guardar</button>
 		</div>
 
 		<script src="bower_components/angularjs/angular.min.js"></script>
