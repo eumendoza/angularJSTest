@@ -9,12 +9,19 @@ myApp.controller("AlumnosController",["$scope",function($scope){
 		{nombre:"David Mendoza", telefono:"666999666", curso:"Tercero ESO"}
 	];
 
+	$scope.formVisibility = false;
+
 	$scope.Save = function(){
 		$scope.alumnos.push({
 			nombre: $scope.nuevoAlumno.nombre,
 			telefono: $scope.nuevoAlumno.telefono,
 			curso: $scope.nuevoAlumno.curso
 		});
+		$scope.formVisibility = false;
 	};
-	
+
+	$scope.ShowForm = function(){
+		$scope.formVisibility = true;
+	}
+
 }]);

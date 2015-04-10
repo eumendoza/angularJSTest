@@ -14,12 +14,16 @@
 			</div>
 		</div>
 
-		<div class="wrapper">
+		</br>
+
+		<center><button ng-click="ShowForm()" ng-hide="formVisibility">Añadir alumno</button></center>
+
+		<div ng-show="formVisibility" class="wrapper">
 			<h2>Añadir un contacto</h2>
-			Nombre: <input type="text" ng-model="nuevoAlumno.nombre"></input>
-			Telefono: <input type="text" ng-model="nuevoAlumno.telefono"></input>
-			Curso: <input type="text" ng-model="nuevoAlumno.curso"></input>
-			<button ng-click="Save()">Guardar</button>
+			<div class="componente-form1">Nombre: <input type="text" ng-model="nuevoAlumno.nombre"></input></div>
+			<div class="componente-form1">Telefono: <input type="text" ng-model="nuevoAlumno.telefono"></input></div>
+			<div class="componente-form2">Curso: <input type="text" ng-model="nuevoAlumno.curso"></input></div>
+			<center><button ng-click="Save()">Guardar</button></center>
 		</div>
 
 		<script src="bower_components/angularjs/angular.min.js"></script>
