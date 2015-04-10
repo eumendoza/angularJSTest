@@ -3,11 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Cuaderno Alumnos</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 	<body ng-controller="AlumnosController">
 		<h1>Cuaderno Alumnos</h1>
-		<div>
-			<div ng-repeat="alumno in alumnos">
+		<div class="wrapper">
+			<div class="contact-item" ng-repeat="alumno in alumnos">
 				<div>{{alumno.nombre}} - {{alumno.telefono}}</div>
 				<span>{{alumno.curso}}</span>
 			</div>
